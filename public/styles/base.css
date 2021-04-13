@@ -1,0 +1,8 @@
+@import 'reset.css';
+@import 'layout.css';
+@import 'module.css';
+
+* {
+    box-sizing: border-box;
+}
+
