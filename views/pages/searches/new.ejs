@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book App</title>
+    <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+    <header>
+        <h1> Best books! </h1>
+    </header>
+    <h1>Search By title Or Author</h1>
+
+    <form action="/searches" method="POST">
+        <input type="text" name="search" placeholder="Enter a title or auhtor ">
+        <br>
+        <label for="">Title <input name="checks" value="intitle" type="radio"> </label>
+        <br> 
+        <label for=""> Author <input name="checks" value="inauthor" type="radio">  </label>
+        <br>
+        <button>Search the google books api</button>
+   </form>
+
+</body>
+</html>
