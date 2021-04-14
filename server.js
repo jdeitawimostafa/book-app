@@ -65,11 +65,6 @@ server.post('/searches',(req,res) => {
     });
 });
 
-// server.get('/bookdetails/:bookID',(req,res)=>{
-
-//   res.render('pages/books/detail');
-// });
-
 
 server.get('/details/:bookID',(req,res) => {
   let sql = 'select * from books where id=$1';
@@ -86,7 +81,7 @@ server.post('/books',(req,res) => {
   let safeValues = [author, title, isbn, image_url, description];
   client.query(sql,safeValues)
     .then(results => {
-      res.redirect(`/pages/books/detail/${results.rows[0].id}`);
+      res.redirect(`/details/${results.rows[0].id}`);
     });
   // res.send('hello');
 });
