@@ -9,11 +9,24 @@
 <body>
     <section>
             <% booksArr.forEach(bookD => { %>
+                
                 <div>
-                <img src= <%= bookD.image %>  alt="bookD">
+                <img src= <%= bookD.image_url %>  alt="bookD">
                 <h2> <%= bookD.title %> </h2>
                 <h3> <%= bookD.author %> </h3>
                 <p> <%= bookD.description %> </p>
+
+                <section>
+                    <form action="/books" method="POST">
+                       <input type="hidden"  name="author" value="<%= bookD.author%>" />
+                       <input type="hidden"  name="title" value="<%= bookD.title%>" />
+                       <input type="hidden"  name="isbn" value="isbn" />
+                       <input type="hidden"  name="image_url" value="<%= bookD.image_url%>" />
+                       <input type="hidden"  name="description" value=" <%= bookD.description%>" />
+                       <button> Select this Book</button>
+                   </form>
+               </section>
+
                 </div>
                 <% }) %>
             </section>
