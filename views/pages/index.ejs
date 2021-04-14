@@ -14,6 +14,17 @@
     <div>
     <a href="/searches/new">Search</a>
 </div>
+
+<section>
+    <% booksArrData.forEach(data => { %>
+        <div>
+        <img src= <%= data.image_url %>  alt="">
+        <h2> <%= data.title %> </h2>
+        <h3> <%= data.author %> </h3>
+        <button><a href="/details/<%=data.id %>">View details</a></button>
+        </div>
+        <% }) %>
+    </section>
     
 </body>
 </html>
